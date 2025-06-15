@@ -1,0 +1,6 @@
+module top_module ( input clk, input d, output q );
+    wire dff_out1, dff_out2;
+    my_dff diff1(.clk(clk),.d(d),.q(dff_out1));
+    my_dff diff2(.clk(clk),.d(dff_out1),.q(dff_out2));
+    my_dff diff3(.clk(clk),.d(dff_out2),.q(q));
+endmodule
